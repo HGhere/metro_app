@@ -1,16 +1,58 @@
-# DELHI METRO RAIL APP
+# Delhi Metro Route Finder (JavaFX)
 
-Please don't get confused, this is NOT an ANDROID Application!
+A Java-based desktop application that computes the shortest route between Delhi Metro stations using graph data structures and Dijkstra’s algorithm.
 
-This is a simple Java program that will take information (name) of the source station and the destination station, of Delhi Metro, from the user and display the fare and shortest metro route to reach the destination. It will also be having a metro map for commuter’s better navigation.
+⚠️ This is **not an Android application**. It is a Java desktop application built using **JavaFX**.
 
-The idea is implemented using Graph and Heap data structures.
-The graph has nodes and edges. Nodes represent a metro station that will be containing certain information regarding that station like its name, its metro corridor, and the lines which it connects. Edges (the connection between two nodes) represent the distance between the two stations and the cost of each edge will be equal to the distance between the two of its connecting stations(nodes). 
+---
 
-By using different algorithms like Dijkstra, breadth-first search, depth-first search, etc, the shortest path between the source station and the destination station is determined, and accordingly, the fare is being calculated on the basis of the total distance between the two stations. Finally, the metro route between the two stations and the total fare is displayed.
+## Features
+- Graph-based modeling of Delhi Metro stations and routes
+- Shortest path calculation using Dijkstra’s algorithm
+- Distance-based fare calculation
+- JavaFX GUI for interactive source and destination selection
+- Edge case handling:
+  - Same source and destination
+  - Unreachable routes
+  - Invalid user input
 
-Main.java cointains all the major code and Heap.java contains heap implementation.
+---
+
+## Technologies Used
+- Java
+- JavaFX
+- Graph Data Structures
+- Dijkstra’s Algorithm
+- Priority Queue
+
+---
+
+## Project Structure
+src/
+├── Graph.java
+├── MetroMap.java
+├── Dijkstra.java
+└── MetroFX.java
 
 
+---
 
-	
+## How It Works
+- Each metro station is modeled as a **node**
+- Each connection between stations is a **weighted edge**
+- Dijkstra’s algorithm is used to compute the shortest path
+- The GUI interacts with the routing logic without mixing concerns
+
+---
+
+## How to Run
+1. Install **JDK 17+**
+2. Download **JavaFX SDK**
+3. Compile and run:
+```bash
+javac --module-path /path/to/javafx/lib --add-modules javafx.controls -d out src/*.java
+java --module-path /path/to/javafx/lib --add-modules javafx.controls -cp out MetroFX
+
+
+## Author
+Harshit Garg
